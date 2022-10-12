@@ -2,13 +2,14 @@
 
 Bir yazılımın gerçekleştirebildiği işlemlere belirli koşullar dahilinde dışarıdan erişilip bu işlemlerin kullanılmasını sağlayan arayüzdür. Kısaca, bir uygulamada gerçekleştirmek istediğimiz ek bir işlemi, o işlemi sağlayan başka bir uygulamadan API kullanarak gerçekleştirebiliriz.
 
-Interface kısmı: telefonu açtığımızda youtube girdik uygulamanın bize sağladığı arayüzden istediğimiz videoya erişebiliyoruz. Arka planını bilmediğimiz uygulamanın arayüzünü kullanarak ulaşabiliriz.
+##### Interface: telefonu açtığımızda youtube girdik uygulamanın bize sağladığı arayüzden istediğimiz videoya erişebiliyoruz. Arka planını bilmediğimiz uygulamanın arayüzünü kullanarak ulaşabiliriz.
 
-Application Programming: İki yazılımın kodun birbiriyle iletişime geçmesidir.
+##### Application Programming: İki yazılımın kodun birbiriyle iletişime geçmesidir.
 
 * API Örnekleri
-OOP Public Methods
-Node.js FS Modülü, Go(lang) FMT Paketi
++ OOP Public Methods
++ Node.js FS Modülü, Go(lang) FMT Paketi
+
 
 * Neden API Kullanırız?
 1. API kullanımı bizi ilgili işlemin gerektireceği iş yükünden kurtarır. “API hayatı kolaylaştırır”.
@@ -16,10 +17,12 @@ Node.js FS Modülü, Go(lang) FMT Paketi
 3. Platform bağımsız çalışırlar.
 4. Güncelleme durumunda bizim yapmamız gereken işlemler sınırlıdır.
 
-
+</br>
 
 API 'yi tanımlayan en iyi örnek-> garson bizle mutfak arasındaki api dir. 
 https://www.youtube.com/watch?v=s7wmiS2mSXY
+
+
 
 Müşteri menüye bakar garsona siparişi söyler.
 ![Ekran Görüntüsü (675)](https://user-images.githubusercontent.com/74673470/195401791-7c50aa94-4d2e-4aa0-bab6-848a9b2dccea.png)
