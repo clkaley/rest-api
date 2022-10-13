@@ -37,7 +37,7 @@ Garson mutfaktan gelen yemeği (response'u) müşteriye verir.
 
 
 
-# REST (Representational State Transfer) API Nedir?
+## REST (Representational State Transfer) API Nedir?
 İlgili isteğe karşılık gelen verinin JSON / XML gibi dosya formatlarında gönderilmesidir.REST API, REST mimarisinin prensiplerine taşıyan API’lardır.
 Rest dediğimiz şey aslında api nin son güncel durumundaki bilgileri kaynaktan alıp göndermesidir.
 
@@ -66,3 +66,75 @@ http isteğiyle rest api json formatında veri döndü.
 4. Cacheable
 5. Layered System
 6. Code On Demand - Optional
+
+
+
+## REST Prensipleri
+<br/>
+
+#### Client-Server
+İstemci isteği gönderen, sunucu da ilgili cevabı veren durumundadır. Birbirlerinin sorumluluk alanlarına girmezler. Birbirlerinden bağımsız programlama dilleri ve teknolojiler kullanabilirler.
+<br/>
+
+![client-server](https://user-images.githubusercontent.com/74673470/195564057-392bee01-69c9-474c-92d1-9ef33adea43a.jpg)
+<br/><br/>
+
+#### Uniform Interface
+Aynı kaynağa yönelik olan tüm istekler, isteğin nereden geldiğinden bağımsız olarak aynı şekilde görünmelidir. Bu aynı zamanda istemci – sunucu bağımsızlığını da destekler. 4 temel özelliği bulunmaktadır.
+<br/>
+
+1. Identification of resources: kaynakların tanımlanması, bir kaynak için sunucuya yapılan istek benzersiz bir URI adresi ile tanımlanmalıdır.
+ ```
+  http://example.com/users(GET)
+  http://example.com/users/11/posts(GET)
+ ```
+<br/>
+
+ 2. Manipulation of resources through representations
+
+<br/>
+
+ 3. Self-descriptive messages
+```
+ Sunucu-> Content Type (JSON, XML)
+ İstemci-> Aynı URI farklı methodlar ve farklı sonuçalar 
+ (GET /users=>amaç kullanıcıları almaktır.) 
+ (PUT /users=> amaç yeni kullanıcı eklemektir) 
+```
+<br/>
+
+
+4. HATEOAS (Hypermedia As The Engine Of Application State)
+Sunucu tarafından gönderilen cevap istenilen verinin yanında bazı ek aksiyonlar da içerebilir.
+Ek bilgiler için:https://en.wikipedia.org/wiki/HATEOAS
+<br/><br/>
+
+#### Statelessness
+State: Söz konusu veriyi veya durumu belirtir. React te düşünürsek herhangi bir component in o anki durumunu ifade eder.
+Statefull(durum bilgisi olan)
+Stateless(durum bilgisi olmayan).
+Gerçek hayattan bir örnek vererek konuyu hayata uyarlayalım. Örneğin hep gittiğimiz bir kafe var ve bu kafade durmadan aynı siparişi mesela tiramisuyu söylüyoruz 1,2,3....15 artık ne olucak garson biz sipariş vermeden tatlımızı getirebilir. Burda garsonun artık durum hakkında bilgisi var yani (Statefull) dur. Ama ben her gittiğimde tekrar tekrar siparişi veriyorsam bu durum (Stateless) dur.
+
+<br/><br/>
+
+#### Cacheable
+Sunucu gelen isteklere verilen cevapların önbelleklenebilir olup olmadığını belirtmelidir.
+İhtiyacımız olan şeyin daha yakına alınması gibi.
+Bir web sayfasına ilk girdiğimiz yükleme uzun sürer ama ondan sonra tekrar girdiğimizde sayfanın bilgileri cache klasöründe vardır ve bize onu getirir hemde öncekine göre daha kısa sürede(tabi güncelleme varsa bu bilgiyi yeniden çeker.) Performans artışını sağlar.
+Örneğin “Cache-Control”, “Expires” gibi HTTP başlıkları önbellek ile ilgili bilgiler taşır.
+
+<br/><br/>
+
+
+
+#### Layered System 
+İstemci – sunucu arasındaki ilişki katmanlara ayrılabilir, ve bileşenler sadece ilişkili oldukları katmanlara karşı sorumlu olurlar.
+<br/>
+
+![layered-system](https://user-images.githubusercontent.com/74673470/195564054-dd5dc18c-b7e3-4a2d-85f4-ce80b9d57550.jpeg)
+<br/><br/>
+
+#### Code On Demand - Optional
+Sunucu, istemci tarafına istemcinin işlevini genişletecek ek kodlar gönderebilir. Bu özellik istemci tarafında yapılması gereken işlemleri hafifletir.
+Örneğin sunucu, istemci tarafına döneceği HTML dökümanın içerisine JavaScript kodları ekleyebilir.
+<br/><br/>
