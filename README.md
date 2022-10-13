@@ -294,8 +294,6 @@ http://example.com/users/1
 
 ##### Connect 
 
-<br/>
-
 ##### Options 
 İlgili URL de izin verilen metotları içerir.
 <br/>
@@ -333,10 +331,13 @@ https://jsonplaceholder.typicode.com/posts
 <br/>
 
 Değişen değer için genelde (:) kullanılır.
-
-https://jsonplaceholder.typicode.com/posts/1 => /posts/:id veya /posts/{{id}}
+```
+https://jsonplaceholder.typicode.com/posts/1 =>
+/posts/:id veya /posts/{{id}}
+```
 
 <br/>
 Sorgu parametreleri için (?) kullanılır.
-
+```
 http://example.com/articles?sort=author&date=published
+```
