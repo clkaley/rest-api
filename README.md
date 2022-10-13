@@ -70,7 +70,6 @@ http isteğiyle rest api json formatında veri döndü.
 
 
 ## REST Prensipleri
-<br/>
 
 #### Client-Server
 İstemci isteği gönderen, sunucu da ilgili cevabı veren durumundadır. Birbirlerinin sorumluluk alanlarına girmezler. Birbirlerinden bağımsız programlama dilleri ve teknolojiler kullanabilirler.
@@ -115,7 +114,7 @@ Statefull(durum bilgisi olan)
 Stateless(durum bilgisi olmayan).
 Gerçek hayattan bir örnek vererek konuyu hayata uyarlayalım. Örneğin hep gittiğimiz bir kafe var ve bu kafade durmadan aynı siparişi mesela tiramisuyu söylüyoruz 1,2,3....15 artık ne olucak garson biz sipariş vermeden tatlımızı getirebilir. Burda garsonun artık durum hakkında bilgisi var yani (Statefull) dur. Ama ben her gittiğimde tekrar tekrar siparişi veriyorsam bu durum (Stateless) dur.
 
-<br/><br/>
+<br/>
 
 #### Cacheable
 Sunucu gelen isteklere verilen cevapların önbelleklenebilir olup olmadığını belirtmelidir.
@@ -123,7 +122,7 @@ Sunucu gelen isteklere verilen cevapların önbelleklenebilir olup olmadığın�
 Bir web sayfasına ilk girdiğimiz yükleme uzun sürer ama ondan sonra tekrar girdiğimizde sayfanın bilgileri cache klasöründe vardır ve bize onu getirir hemde öncekine göre daha kısa sürede(tabi güncelleme varsa bu bilgiyi yeniden çeker.) Performans artışını sağlar.
 Örneğin “Cache-Control”, “Expires” gibi HTTP başlıkları önbellek ile ilgili bilgiler taşır.
 
-<br/><br/>
+<br/>
 
 
 
@@ -132,7 +131,7 @@ Bir web sayfasına ilk girdiğimiz yükleme uzun sürer ama ondan sonra tekrar g
 <br/>
 
 ![layered-system](https://user-images.githubusercontent.com/74673470/195564054-dd5dc18c-b7e3-4a2d-85f4-ce80b9d57550.jpeg)
-<br/><br/>
+<br/>
 
 #### Code On Demand - Optional
 Sunucu, istemci tarafına istemcinin işlevini genişletecek ek kodlar gönderebilir. Bu özellik istemci tarafında yapılması gereken işlemleri hafifletir.
@@ -190,7 +189,7 @@ Response Message Body: Cevabın html sayfası
 
 ![Ekran Görüntüsü (681)](https://user-images.githubusercontent.com/74673470/195694977-b7435c11-94e0-48d9-9c9f-0ad0da50de1c.png)
 
-<br/><br/><br/>
+<br/><br/>
 
 ## HTTP Status Codes
 Sunucu tarafından ilgili isteğin sonucunu belirten, 3 rakamdan oluşan sayısal ifadelerdir.
@@ -203,9 +202,11 @@ Sunucu tarafından ilgili isteğin sonucunu belirten, 3 rakamdan oluşan sayısa
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#information_responses
 
 <br/>
+
 1. Informational Responses
 100: Continue
 102: Processing
+<br/>
 Bildirimseldir sunucu tarafından 
 <br/>
 
