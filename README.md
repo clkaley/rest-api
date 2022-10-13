@@ -189,3 +189,48 @@ Response Message Body: Cevabın html sayfası
 <br/>
 
 ![Ekran Görüntüsü (681)](https://user-images.githubusercontent.com/74673470/195694977-b7435c11-94e0-48d9-9c9f-0ad0da50de1c.png)
+
+<br/><br/><br/>
+
+## HTTP Status Codes
+Sunucu tarafından ilgili isteğin sonucunu belirten, 3 rakamdan oluşan sayısal ifadelerdir.
+
+
+![Ekran Görüntüsü (682)](https://user-images.githubusercontent.com/74673470/195696624-e105562f-4d52-4c63-85e8-d61171621da5.png)
+
+<br/>
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#information_responses
+
+<br/>
+1. Informational Responses
+100: Continue
+102: Processing
+Bildirimseldir sunucu tarafından 
+<br/>
+
+2. Successful Responses
+200 OK 
+201 Created
+204 No Content
+<br/>
+
+3. Redirections 
+300 Multiple Choice
+301 Moved Permanently (kaynak adresi kalıcı olarak değiştirildi)
+304 Not Modified (değişiklik yok)
+<br/>
+
+4. Client Errors
+400 Bad Request
+401 Unauthorized (istemci istekte bulunurken gerekli kimlik doğrulaması yapılmamıştır.)
+403 Forbidden (Yetkinin olmadığı işlem yapmak)
+404 Not Found (bulunmayan kaynağa istek bulunmak)
+405 Method Not Allowed (get requeste put request göndermek)
+<br/>
+
+5. Server Errors
+500 Internal Server Error (istemci tarafından istek başarılı sunucu tarafından cevap dönmüyor)
+503 Service Unavailable (Server tarafında bakım varsa)
+<br/>
+
