@@ -233,3 +233,110 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#information_responses
 503 Service Unavailable (Server tarafında bakım varsa)
 <br/>
 
+
+
+## HTTP Methods
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+<br/>
+<br/>
+
+##### Get 
+Verileri almak ve listelemek için kullanılan istek metot.
+
+```
+GET
+http://example.com/users
+```
+<br/>
+
+
+
+##### Post 
+Belirli bir kaynağa veri göndermek için kullanılır.
+
+```
+POST
+http://example.com/users
+```
+<br/>
+
+##### Put 
+Belirli bir kaynaktaki verinin tamamının değiştirilmesi için kullanılan metot. Gönderdiğimizde verinin body sinde bulunan her şeyi göndermemiz gerekiyor :)
+
+```
+PUT
+http://example.com/users/1
+{ “name": "Ali", "surname": "Ezer"}
+```
+<br/>
+
+
+##### Patch 
+Belirli bir kaynaktaki verilerin bir kısmının değiştirilmesi için kullanılan metot.
+
+```
+PATCH
+http://example.com/users/1
+{ "name": "Ahmet"}
+```
+<br/>
+
+
+##### Delete 
+Belirli bir kaynaktaki verilerin silinmesi için kullanılan metot.
+
+```
+DELETE
+http://example.com/users/1
+```
+<br/>
+
+##### Connect 
+
+<br/>
+
+##### Options 
+İlgili URL de izin verilen metotları içerir.
+<br/>
+
+##### Trace 
+Genelde debug metotları için kullanılır
+<br/>
+
+##### Head 
+Get metoduna benziyor ama yalnızca header bilgisini alabiliyoruz.
+
+<br/>
+
+#### Safe Metodlar
+GET, HEAD, OPTIONS: Sunucu "state" tarafında değişiklik oluşturmazlar. "Read-Only" yapısındadır.
+<br/>
+
+#### IDEMPOTENT (etkisiz) Metotlar
+GET – HEAD - OPTIONS – DELETE – PUT – TRACE : Tekrar durumunda sunucu state yapısında herhangi bir yan etki bırakmazlar. Safe metodlar, idempotent'tır. 
+<br/><br/>
+
+
+### Endpoint (Sorgu Adresi)
+REST API kullanımında gönderilen istek ile verilen cevap için belirlenen buluşma noktasıdır.
+<br/>
+Root(Base) /Path yapısından oluşur, isimler kullanılır, fiil ilgili HTTP metodu ile belirtilir. Dökümantasyon tarafından belirtilir.
+
+```
+https://jsonplaceholder.typicode.com/posts
+.com a kadar base root
+/posts ise resource verir
+```
+
+
+<br/>
+
+Değişen değer için genelde (:) kullanılır.
+
+https://jsonplaceholder.typicode.com/posts/1 => /posts/:id veya /posts/{{id}}
+
+<br/>
+Sorgu parametreleri için (?) kullanılır.
+
+http://example.com/articles?sort=author&date=published
