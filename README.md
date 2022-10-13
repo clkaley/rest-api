@@ -340,5 +340,5 @@ https://jsonplaceholder.typicode.com/posts/1 =>
 Sorgu parametreleri için (?) kullanılır.
 
 ```
-http://example.com/articles?sort=author&date=published
+http://example.com/articles?sort=author
 ```
