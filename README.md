@@ -207,8 +207,6 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#information_responses
 100: Continue
 102: Processing
 <br/>
-Bildirimseldir sunucu tarafından 
-<br/>
 
 2. Successful Responses
 200 OK 
