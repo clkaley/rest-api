@@ -137,4 +137,56 @@ Bir web sayfasına ilk girdiğimiz yükleme uzun sürer ama ondan sonra tekrar g
 #### Code On Demand - Optional
 Sunucu, istemci tarafına istemcinin işlevini genişletecek ek kodlar gönderebilir. Bu özellik istemci tarafında yapılması gereken işlemleri hafifletir.
 Örneğin sunucu, istemci tarafına döneceği HTML dökümanın içerisine JavaScript kodları ekleyebilir.
-<br/><br/>
+<br/><br/><br/>
+
+
+
+
+
+## HTTP (Hyper Text Transfer Protocol) Nedir? 
+İstemci ile sunucu arasındaki veri akışının kurallarını belirleyen protokoldür. Request, Response modeline göre çalışır. Burdaki isteğin ve cevabın belirli bir formatta olması gerekir.
+
+<br/>
+
+![HTTP](https://user-images.githubusercontent.com/74673470/195684275-ce929192-c609-4b52-b9bc-dfffb9e7a90b.jpeg)
+
+
+
+##### REST Mimarisinde HTTP'nin Rolü
+REST mimarisinin prensiplerinde istemci - sunucu çalışma modelidir. Biz bir istekte bulunuruz ve sunucu isteğimize karşılık olan durumu (state) bize bir sunum (presentation) olarak gönderir. HTTP protokolü burada bu sunum transferi için kurulan iletişimin kurallarını belirler. REST mimarisine uygun API'ların neredeyse tamamında HTTP protokolü kullanılır.
+
+
+#### HTTP Request
+İstek (Request) yapısını belirtir. 4 bölümden oluşur.
+<br/>
+
+![Request](https://user-images.githubusercontent.com/74673470/195685107-7cdc0219-f5dd-4ccf-9249-a5ec7ae96206.png)
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP
+
+Request Line: Kullanılacak http metodu ve gidilecek olan path ve http versiyon belirtilir.
+<br/>
+Request Headers: Yapılan isteğin özelliklerini belirtir. (Content-Length:gönderilen başlığın uzunluğu)
+<br/>
+Blank Line: Header özellikleri ile msaj body' yi ayırmak
+<br/>
+Request Message Body:Bu istekte ne yapmak istediğimizi belirtir.
+<br/>
+
+#### HTTP Response
+
+![Response](https://user-images.githubusercontent.com/74673470/195685113-fc5b8a02-bb60-4635-812f-3dbcb402216a.png)
+
+<br/>
+
+Status Line: protokol versiyonu http status kod döner. İsteğin başarılı olup olmadığına dair bilgiler döner.
+
+<br/>
+Response Headers:Cevaba ait özellikler taşır.
+<br/>
+Blank Line:Header özellikleri ile msaj body' yi ayırmak
+<br/>
+Response Message Body: Cevabın html sayfası
+<br/>
+
+![Ekran Görüntüsü (681)](https://user-images.githubusercontent.com/74673470/195694977-b7435c11-94e0-48d9-9c9f-0ad0da50de1c.png)
