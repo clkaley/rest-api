@@ -180,7 +180,6 @@ Request Message Body:Bu istekte ne yapmak istediğimizi belirtir.
 <br/>
 
 Status Line: protokol versiyonu http status kod döner. İsteğin başarılı olup olmadığına dair bilgiler döner.
-
 <br/>
 Response Headers:Cevaba ait özellikler taşır.
 <br/>
