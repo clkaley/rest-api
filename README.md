@@ -342,3 +342,29 @@ Sorgu parametreleri için (?) kullanılır.
 ```
 http://example.com/articles?sort=author
 ```
+<br/><br/>
+
+
+
+## JSON (JavaScript Object Notation) Nedir?
+Veri depolamak veya veri iletmek için kullanılan metin tabanlı söz dizimidir.
+
+https://www.json.org/json-en.html
+<br/>
+
+#### JSON Veri Tipleri
+
+String: "String", 
+<br/>
+Number: 7, 3.2, 
+<br/>
+Boolean: true, false
+<br/>
+Null: null
+<br/>
+Array: ["İstanbul", "Ankara", "Malatya"] Array içerisinde kullanılan değerler sıralı olarak listelenebilir.
+<br/>
+Object { "name": "Ali", "age":24 } JSON nesneleri verileri key-value çiftleri olarak tanımlar.
+<br/>
+
+ JSON dosyaları bir array, nesne ve/veya bunların iç içe geçmiş formlarından oluşur.
