@@ -366,5 +366,4 @@ Array: ["İstanbul", "Ankara", "Malatya"] Array içerisinde kullanılan değerle
 <br/>
 Object { "name": "Ali", "age":24 } JSON nesneleri verileri key-value çiftleri olarak tanımlar.
 <br/>
-
  JSON dosyaları bir array, nesne ve/veya bunların iç içe geçmiş formlarından oluşur.
