@@ -389,3 +389,18 @@ https://www.w3schools.com/xml/default.asp
 <br/>
 
 JSON formatının XML formatına göre en büyük avantajı, doğalında bir nesne modeline sahip olmasıdır. Bu özellik sayesinde birçok programlama dili JSON verileri daha kolay bir şekilde işleyebilir.
+
+
+
+## Postman
+Postman bir API platformudur. API geliştirmek , test etmek ve/veya hazır bir API kullanımı için gerekli isteklerde bulunabileceğimiz bir uygulamadır. 
+<br/>
+Postman kurulumu ve kullanımı için resmi dökümantasyon: https://learning.postman.com/docs/getting-started/introduction/
+<br/>
+
+
+Request:  GET: https://jsonplaceholder.typicode.com/users
+<br/>
+
+Response
+![Ekran Görüntüsü (686)](https://user-images.githubusercontent.com/74673470/195790189-ab26ed49-7b6b-4633-a992-b3c75b029752.png)
