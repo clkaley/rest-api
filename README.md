@@ -367,3 +367,25 @@ Array: ["İstanbul", "Ankara", "Malatya"] Array içerisinde kullanılan değerle
 Object { "name": "Ali", "age":24 } JSON nesneleri verileri key-value çiftleri olarak tanımlar.
 <br/>
  JSON dosyaları bir array, nesne ve/veya bunların iç içe geçmiş formlarından oluşur.
+
+
+
+ ## JSON/JavaScript/XML 
+
+
+
+#### JSON vs JavaScript
+JavaScript web uygulamalarında sıklıkla kullanılan dinamik bir programlama dilidir. JSON ise bir söz dizim olarak JavaScript'in bir alt kümesi olarak düşünülebilir. Bu nedenle uygun JSON formatındaki bir içerik JavaScript ifadesine (expression) denk gelir.
+ ![Ekran Görüntüsü (684)](https://user-images.githubusercontent.com/74673470/195784976-5e86147b-84a8-49f6-9d59-6bfb41444a93.png)
+
+
+
+#### JSON vs XML
+eXtensible Markup Language ifadesinin kısaltmasıdır. Veri depolamak ve iletmek için kullanılan bir script dilidir.
+<br/>
+https://www.w3schools.com/xml/default.asp
+
+![Ekran Görüntüsü (685)](https://user-images.githubusercontent.com/74673470/195785823-2f0da0f6-268f-4527-8ab5-f8b85a29a975.png)
+<br/>
+
+JSON formatının XML formatına göre en büyük avantajı, doğalında bir nesne modeline sahip olmasıdır. Bu özellik sayesinde birçok programlama dili JSON verileri daha kolay bir şekilde işleyebilir.
