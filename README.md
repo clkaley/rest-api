@@ -404,3 +404,48 @@ Request:  GET: https://jsonplaceholder.typicode.com/users
 
 Response
 ![Ekran Görüntüsü (686)](https://user-images.githubusercontent.com/74673470/195790189-ab26ed49-7b6b-4633-a992-b3c75b029752.png)
+
+
+
+## SWAPI API
+https://swapi.dev/
+
+Dokümantasyonu=> https://swapi.dev/documentation
+
+Base URL: apı nin kök adresidir. Yapacağımız tüm istekler bu adresi barındırır.
+https://swapi.dev/api/
+<br/>
+Postman'de yapılan istekler için bu şekilde dizin kullanılabilir örnek olarak dosyalama şekli aşağıdaki gibidir.
+
+![Ekran Görüntüsü (698)](https://user-images.githubusercontent.com/74673470/196028219-26952caf-f49a-47b2-b287-b0a75ddf2316.png)
+
+<br/><br/>
+GET ALL FILMS=> https://swapi.dev/api/films
+
+![Ekran Görüntüsü (688)](https://user-images.githubusercontent.com/74673470/196028322-739ad566-8bf8-4494-9606-c45426ed7c66.png)
+
+<br/><br/>
+GET A FILMS=> https://swapi.dev/api/films/2/
+
+![Ekran Görüntüsü (699)](https://user-images.githubusercontent.com/74673470/196028428-fcf422a9-5531-4b7a-ae5a-2a462c38a63c.png)
+<br/><br/>
+
+Postman da baseURL eklemek
+![Ekran Görüntüsü (690)](https://user-images.githubusercontent.com/74673470/196028470-6f1216d4-e268-4d35-b56d-ee35f3e15bbd.png)
+<br/><br/>
+
+baseURL'i diğer sorgulara eklemek için{{baseURL}} kullanılır.
+
+![Ekran Görüntüsü (691)](https://user-images.githubusercontent.com/74673470/196028515-c88b9684-595d-41c9-951a-70b1093c6fb5.png)
+
+![Ekran Görüntüsü (692)](https://user-images.githubusercontent.com/74673470/196028517-49b1dc7b-2950-446a-93af-a0f7f0609e1d.png)
+<br/><br/>
+
+<br/><br/>
+SEARCH FILM=> https://swapi.dev/api/films/?search=Hope
+
+![Ekran Görüntüsü (695)](https://user-images.githubusercontent.com/74673470/196028584-a63e8df8-7bf7-48db-b833-dd27c015545f.png)
+
+?searhc=r2
+? => burda query sorgu parametresi yaptığımızı söylüyor.
+search=> sorgu paremetresi key değerine denk geliyo. Yani bir şey sorgularken key=search oluyor.
