@@ -423,7 +423,9 @@ Postman'de yapılan istekler için bu şekilde dizin kullanılabilir örnek olar
 GET ALL FILMS=> https://swapi.dev/api/films
 
 ![Ekran Görüntüsü (688)](https://user-images.githubusercontent.com/74673470/196028322-739ad566-8bf8-4494-9606-c45426ed7c66.png)
+<br/>
 
+![Ekran Görüntüsü (696)](https://user-images.githubusercontent.com/74673470/196028691-9a60c586-c001-41dc-8932-e9b495401d6c.png)
 <br/><br/>
 GET A FILMS=> https://swapi.dev/api/films/2/
 
@@ -444,8 +446,9 @@ baseURL'i diğer sorgulara eklemek için{{baseURL}} kullanılır.
 <br/><br/>
 SEARCH FILM=> https://swapi.dev/api/films/?search=Hope
 
-![Ekran Görüntüsü (695)](https://user-images.githubusercontent.com/74673470/196028584-a63e8df8-7bf7-48db-b833-dd27c015545f.png)
-
-?searhc=r2
+?search=r2
 ? => burda query sorgu parametresi yaptığımızı söylüyor.
 search=> sorgu paremetresi key değerine denk geliyo. Yani bir şey sorgularken key=search oluyor.
+
+![Ekran Görüntüsü (695)](https://user-images.githubusercontent.com/74673470/196028584-a63e8df8-7bf7-48db-b833-dd27c015545f.png)
+
