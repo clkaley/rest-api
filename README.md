@@ -451,4 +451,143 @@ SEARCH FILM=> https://swapi.dev/api/films/?search=Hope
 search=> sorgu paremetresi key değerine denk geliyo. Yani bir şey sorgularken key=search oluyor.
 
 ![Ekran Görüntüsü (695)](https://user-images.githubusercontent.com/74673470/196028584-a63e8df8-7bf7-48db-b833-dd27c015545f.png)
+<br/> <br/>
+
+
+## The Movie Database API (TMDBAPI)
+Öncelikle üye işlemi gerçekleştirilir.
+Ayarlardan API kısmına gelip api key i oluşturmamız gerekiyor. Yapılacak işlemler için giriş anahtarı olarak düşünülebilir.
+<br/>
+
+* GET Popular Films=>https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1
+
+![Ekran Görüntüsü (702)](https://user-images.githubusercontent.com/74673470/196352527-a1f78bd7-9192-4b74-a4ae-cb56b0a3b062.png)
+
+```
+{
+    "status_code": 7,
+    "status_message": "Invalid API key: You must be granted a valid key.",
+    "success": false
+}
+```
+Burda alınan hata api key i üye olduktan sonra api bölümünden almıştık. Aldığımız key i oraya yerleştiriyoruz. Alınan key value değerine yapıştırılır.
+
+
+![Ekran Görüntüsü (703)](https://user-images.githubusercontent.com/74673470/196353097-80d3017a-6504-482d-8692-61622dc4aaf8.jpg)
+
+<br/>
+
+Birden fazla kimlik doğrulama seçenekleri var
+
+![Ekran Görüntüsü (704)](https://user-images.githubusercontent.com/74673470/196354142-19f4dd67-d3a4-4814-9536-e0bf0648edc1.jpg)
+
+<br/>
+Biz api key ile kimlik doğrulamasını seçtiimizde sayfa böyle şekillenir.
+
+![Ekran Görüntüsü (705)](https://user-images.githubusercontent.com/74673470/196354283-cd0616d8-ed87-4eb7-8f7f-1afa3efbf053.jpg)
+
+<br/>
+Ardından bizde boşluk olan yeri dokümantasyon bize nasıl diyorsa öyle doldururuz.
+
+![Ekran Görüntüsü (706)](https://user-images.githubusercontent.com/74673470/196354518-a2ce34f5-ecb0-42ee-8d78-ae3f6b057809.jpg)
+
+<br/>
+
+Dokümantasyon kısmında key in query parametre olduğu yazıyor :)
+
+![Ekran Görüntüsü (708)](https://user-images.githubusercontent.com/74673470/196354863-4b71f877-27c8-4256-be49-e370387b89d6.png)
+
+<br/>
+
+baseURL oluşturma ve query e ekleme
+
+![Ekran Görüntüsü (711)](https://user-images.githubusercontent.com/74673470/196355517-1bd6b9a0-801e-4e49-8367-caa904144582.png)
+s
+![Ekran Görüntüsü (712)](https://user-images.githubusercontent.com/74673470/196355525-e2b9fa00-d757-4fe0-b1a6-d16040741fe4.png)
+
+<br/>
+
+!!! Farklı collectionlar da aynı isimde değişkenler olabilir. Biz SWAPI de baseURL kullandık burda da ama değişkenlerin scope u collection lara bağlı.
+<br/>
+
+GET A FILM DETAIL=>https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+
+{movie_id} içinde bulunan movie_id kısmı postman da :movie_id şeklinde gösterilir.baseURL oluşturmuştuk onu da ekleyebiliriz.
+
+![Ekran Görüntüsü (713)](https://user-images.githubusercontent.com/74673470/196359128-90c50a0c-e68c-4a4a-9ea0-415b55d26e7f.png)
+
+Verilen hata api key inin olmaması
+<br/>
+
+
+Bunu düzeltmek için api key ini eklicez burda authorization kısmına geliyoruz zaten mevcut kaydedip sorgulamayı başlatıyoruz.
+
+![Ekran Görüntüsü (715)](https://user-images.githubusercontent.com/74673470/196388664-7ce6f734-1424-4adb-b83c-470678f8b673.jpg)
+
+<br/>
+
+POST=>https://api.themoviedb.org/3/movie/{movie_id}/rating?api_key=<<api_key>>
+
+baseURL api key eklendi ama hata verdi iznimiz yok filmi oylamaya
+
+![Ekran Görüntüsü (716)](https://user-images.githubusercontent.com/74673470/196389835-56caf0a1-fa3f-4471-996a-9942fa2bd34a.jpg)
+<br/>
+
+Burda bize post metodunu kullanırken açıklama session istiyor. Ynai oturum açılması gerekiyor. Peki bunu nasıl yapıcaz dokümantasyonda detaylıca anlatılıyor. 
+https://developers.themoviedb.org/3/authentication/how-do-i-generate-a-session-id
+
+![Ekran Görüntüsü (717)](https://user-images.githubusercontent.com/74673470/196390138-09407695-8891-468e-916b-316bde58bb62.png)
+
+<br/>
+
+1. Create a request token
+
+Token:Tek kullanımlık yaşam süresi olan hashlenmiş yada şifrelenmiş bir bilgi içeren metinlerdir.
+Token almak için tekrar bir istekte bulunmamız gerekiyor bunun için
+
+GET Authentication=> https://api.themoviedb.org/3/authentication/token/new?api_key=<<api_key>>
+
+![Ekran Görüntüsü (718)](https://user-images.githubusercontent.com/74673470/196391461-48a2e555-ee50-4a7b-bf77-37b1c26d19c3.jpg)
+
+ <br/>
+ Alınan token collection a eklendi.
+
+ ![Ekran Görüntüsü (720)](https://user-images.githubusercontent.com/74673470/196393910-7f7c4d22-ecf9-432d-9538-e0f9bc37066e.jpg)
+
+ <br/>
+
+2. Ask the user for permission
+https://www.themoviedb.org/authenticate/{REQUEST_TOKEN} direkt url e gidilir ve izin alınır.
+
+
+3. Create a session ID
+POST=> https://api.themoviedb.org/3/authentication/session/new?api_key=<<api_key>>
+
+baseURL eklendi ve sorgulama yaparken request body e token eklenmesi gerekiyorud o da eklendikten sonra session_id oluşturuldu.
+
+![Ekran Görüntüsü (722)](https://user-images.githubusercontent.com/74673470/196395623-b0a54e4e-b45c-43f8-b143-2bc16a193466.jpg)
+<br/>
+
+Oluşturulan session id de variable a eklendi.
+
+![Ekran Görüntüsü (724)](https://user-images.githubusercontent.com/74673470/196396411-6475ddd1-997f-4714-8b21-5c55c449b21b.jpg)
+<br/>
+
+{{session_id}} şu şekilde çünkü tmdb variable içinde tanımladık baseURL gibi :)
+
+![Ekran Görüntüsü (725)](https://user-images.githubusercontent.com/74673470/196397668-ffc17294-9cf9-465d-8997-c6e07c7ad882.png)
+
+<br/>
+
+
+DELETE=> https://api.themoviedb.org/3/movie/{movie_id}/rating?api_key=<<api_key>>
+
+![Ekran Görüntüsü (726)](https://user-images.githubusercontent.com/74673470/196398730-b8907b66-7593-4b4e-95c1-36ea09497828.jpg)
+
+<br/>
+
+Authorizatipn için api_key ya da Bearer Token kullanılabilir oda aynı şekilde Auth kısmında Bearer seçilerek oluşturulur.
+
+![Ekran Görüntüsü (727)](https://user-images.githubusercontent.com/74673470/196400285-4f1263ce-bf56-4e9f-b37e-6758d39d3388.png)
+
 
