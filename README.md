@@ -613,3 +613,143 @@ aşağıdaki komut ile json-server paketini indiriyoruz.
 npm i json-server
 ```
 <br/>
+
+Employees adlı json dosyası oluşturuldu.
+
+Bu json dosyasını çalıştırmak için 
+
+```
+json-server --watch employees.json
+```
+<br/>
+
+Bunu script tagleri içine yazabiliriz package.json scripts start kısmını şu şekilde revize edelim.
+```
+  "scripts": {
+    "start:server": "json-server -- watch api/employees.json"
+  },
+```
+<br/>
+
+
+Server başlatmak için aşağıdaki komut yazılır.
+```
+npm run start:server
+```
+
+3000 portunda çalışıyoruz. 
+![Ekran Görüntüsü (730)](https://user-images.githubusercontent.com/74673470/196668836-265b4974-007a-432e-9328-0df07f200530.png)
+
+![Ekran Görüntüsü (731)](https://user-images.githubusercontent.com/74673470/196668840-521eb8a7-46be-4a06-9d51-e588b975721d.png)
+
+<br/>
+
+Postman da yeni colleciton oluşturuyoruz ismi FAKE API. Burda ilk request i atıcaz çalışan portta yazan linki yazıp request i send ediyoruz.
+GET ALL EMPLOYEES=>http://localhost:3000/employees
+
+```
+http://localhost:3000=> baseURL
+```
+
+![Ekran Görüntüsü (732)](https://user-images.githubusercontent.com/74673470/196669054-ffd4f68e-0eac-437b-b345-f7e2063c70b9.png)
+
+<br/>
+
+baseURL oluşturduk burda oluşturduğumuz baseURL'i request içine yazdık.
+
+![Ekran Görüntüsü (733)](https://user-images.githubusercontent.com/74673470/196669059-48732f76-b766-4d1f-bd1b-3cb0d1bbaf07.png)
+
+![Ekran Görüntüsü (734)](https://user-images.githubusercontent.com/74673470/196669072-1e462a0d-3c74-45e0-80df-4515c8036273.png)
+<br/>
+
+
+GET A EMPLOYEE=>http://localhost:3000/employees/:id
+
+
+![Ekran Görüntüsü (735)](https://user-images.githubusercontent.com/74673470/196669267-6e3d5177-30ef-4bda-a6b4-dd849adc9b94.png)
+
+<br/>
+
+
+##### Fitreleme 
+EMPLOYEES - GENDER - GET=>http://localhost:3000/employees/?gender=Male
+
+![Ekran Görüntüsü (736)](https://user-images.githubusercontent.com/74673470/196669372-e017002c-08fa-41b6-b903-2c3508f93fc5.png)
+<br/>
+
+EMPLOYEES - roleID - GET=>http://localhost:3000/employees/?roleId=3
+
+![Ekran Görüntüsü (737)](https://user-images.githubusercontent.com/74673470/196669347-281dc781-8c2b-401b-9bcc-1c46650e3190.png)
+
+<br/>
+
+iki adet filtereleme için & işareti kullanılır.
+EMPLOYEES - GENDER & roleId- GET=>
+http://localhost:3000/employees?gender=Female&roleId=3
+
+![Ekran Görüntüsü (738)](https://user-images.githubusercontent.com/74673470/196669355-6962cd4c-8032-4ce1-818c-a247b53e4b5a.png)
+<br/>
+
+##### Pagination _page=1=>http://localhost:3000/employees?_page=1
+
+1-10 arasındaki değerleri gösterir.
+![Ekran Görüntüsü (739)](https://user-images.githubusercontent.com/74673470/196670803-321aaa85-4120-48d6-b7a2-fdb8975812a5.png)
+<br/>
+
+##### Sort?=>http://localhost:3000//employees/?_sort=first_name
+
+
+![Ekran Görüntüsü (740)](https://user-images.githubusercontent.com/74673470/196671410-c041ab15-e15a-42da-901e-889d915ac520.png)
+
+<br/>
+
+##### Search=> http://localhost:3000/employees/?q=ger
+
+
+![Ekran Görüntüsü (741)](https://user-images.githubusercontent.com/74673470/196671816-2c215b7c-79f0-4c24-81c1-345079a0f42a.png)
+<br/>
+
+
+##### Relationships
+Çalışanların roleId leri var yani çalışan ve roles arasında parent-child ilişkisi var.
+embed=parent a göre 
+expand=child a göre
+GET=>http://localhost:3000/roles?_embed=employees
+
+![Ekran Görüntüsü (742)](https://user-images.githubusercontent.com/74673470/196676512-6fec601f-4cdb-4de4-b212-2d878bf3aab9.png)
+<br/>
+
+
+POST=>Bu metod ile biz employee tarafına yeni bir çalışan eklicez bunun için o verileri göndermemiz lazım Body postmandan seçip value leri yazıp isteği göndeririz. 
+
+```
+ {
+      "first_name": "Aleyna",
+      "last_name": "Çelik",
+      "email": "ac@gmail.com",
+      "gender": "Female",
+      "roleId": 3
+ }
+```
+
+![Ekran Görüntüsü (743)](https://user-images.githubusercontent.com/74673470/196677570-264d05f3-177a-4e8e-8e92-736cf3efa26b.png)
+
+![Ekran Görüntüsü (745)](https://user-images.githubusercontent.com/74673470/196677854-bfd50842-9340-4301-9075-a36bed6a2cae.png)
+
+<br/>
+
+Delete=>Sileceğimiz çalışanın id yazarız.
+http://localhost:3000/employees/:emp_id
+
+![Ekran Görüntüsü (746)](https://user-images.githubusercontent.com/74673470/196681021-7dbf7538-3875-4825-8546-478b28994671.png)
+<br/>
+Patch=> Bilgileri değiştirme
+http://localhost:3000/employees/:emp_id
+
+
+![Ekran Görüntüsü (750)](https://user-images.githubusercontent.com/74673470/196685422-414167be-f3af-4bce-b67c-bc063f6cb649.png)
+
+![Ekran Görüntüsü (748)](https://user-images.githubusercontent.com/74673470/196685421-f65e3f0b-9e4f-44e6-a407-af21b779fa04.png)
+
+![Ekran Görüntüsü (751)](https://user-images.githubusercontent.com/74673470/196685423-4be32d3f-a50e-4aeb-8ed6-675f72a656ae.png)
+<br/>
