@@ -591,3 +591,25 @@ Authorizatipn için api_key ya da Bearer Token kullanılabilir oda aynı şekild
 ![Ekran Görüntüsü (727)](https://user-images.githubusercontent.com/74673470/196400285-4f1263ce-bf56-4e9f-b37e-6758d39d3388.png)
 
 
+<br/>
+
+## FAKE API
+
+##### Fake API Avantajları
+1. Frontend (Ön yüz) tarafı hazır olan bir uygulamayı test etmek isteyebiliriz.
+2. Yapmayı düşündüğümüz bir Backend (Arka yüz) çalışması için bir prototip oluşturmak isteyebiliriz.
+3. Postman gibi bir API platformunda farklı HTTP metotlarına ait istekler gerçekleştirmek isteyebiliriz.
+<br/>
+
+FAKE REST API oluşturmak için json-server npm paketinden faydalanacağız. Öncelikle dosya dizinine aşağıdaki komut ile package.json dosyası oluşturacağız.
+
+```
+npm init 
+```
+<br/>
+
+aşağıdaki komut ile json-server paketini indiriyoruz.
+```
+npm i json-server
+```
+<br/>
