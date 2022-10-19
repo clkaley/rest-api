@@ -769,3 +769,5 @@ https://curl.se/docs/
 gitBash içinde curl kullanılabilir ama isteğe göre ayrıca indirilebilir.
 
 ![Ekran Görüntüsü (753)](https://user-images.githubusercontent.com/74673470/196693754-2a3fb9df-f3bd-4887-b9fe-63267e67b14f.png)
+
+![Ekran Görüntüsü (755)](https://user-images.githubusercontent.com/74673470/196696653-7713e2db-34bd-4df8-b0c5-11ff67f039ad.png)
