@@ -752,4 +752,20 @@ http://localhost:3000/employees/:emp_id
 ![Ekran Görüntüsü (748)](https://user-images.githubusercontent.com/74673470/196685421-f65e3f0b-9e4f-44e6-a407-af21b779fa04.png)
 
 ![Ekran Görüntüsü (751)](https://user-images.githubusercontent.com/74673470/196685423-4be32d3f-a50e-4aeb-8ed6-675f72a656ae.png)
+<br/> <br/>
+
+## cURL
+URL üzerinden veri transferi yapmamızı sağlayan bir komut satırı aracıdır. REST API çerçeverinde sorgu adreslerine yapılan isteklerde sıklıkla kullanılır. HTTP, HTTPS, FTP, FTPS, GOPHER, GOPHERS, IMAP, IMAPS vs.. bir çok protokolü desteklemektedir.
+https://curl.se/docs/
 <br/>
+
+##### cURL komutları
+-i (--include): Çıktı içerisinde HTTP başlıklarını da gösterir.
+-I (--head): Yalnızca HTTP başlıklarını görmek için kullanılır.
+-o (--output) <file> : Çıktıyı bir dosyaya yazdırmak için kullanılır.
+-v (--verbose): Daha fazla detay.
+
+<br/>
+gitBash içinde curl kullanılabilir ama isteğe göre ayrıca indirilebilir.
+
+![Ekran Görüntüsü (753)](https://user-images.githubusercontent.com/74673470/196693754-2a3fb9df-f3bd-4887-b9fe-63267e67b14f.png)
